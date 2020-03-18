@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "leyou.sms.verifyCodeTemplate",
+      "type": "java.lang.String",
+      "description": "Description for leyou.sms.verifyCodeTemplate."
+  }
+] }

@@ -1,0 +1,15 @@
+# Project exclude paths
+.idea
+/leyou-common/target/
+/leyou-getway/target/
+/leyou-goods-web/target/
+/leyou-item/leyou-item-interface/target/
+/leyou-item/leyou-item-service/target/
+/leyou-registry/target/
+/leyou-search/target/
+/leyou-sms-service/target/
+# 短信通道敏感信息
+/leyou-sms-service/src/main/resources/*
+/leyou-upload/target/
+/leyou-user/leyou-user-interface/target/
+/leyou-user/leyou-user-service/target/
