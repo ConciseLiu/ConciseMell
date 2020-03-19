@@ -1,6 +1,6 @@
 package com.leyou.user.mapper;
 
-import com.leyou.pojo.user.User;
+import com.leyou.user.pojo.User;
 import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.common.Mapper;
 

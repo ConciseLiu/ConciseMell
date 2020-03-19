@@ -40,6 +40,6 @@ public class SmsListener {
             return ;
         }
 
-        smsUtils.sendSms(phone, code, smsProperties.getSignName(), smsProperties.getAccessKeySecret(), smsProperties.getVerifyCodeTemplate());
+        smsUtils.sendSms(phone, code, smsProperties.getSignName(), smsProperties.getVerifyCodeTemplate());
     }
 }

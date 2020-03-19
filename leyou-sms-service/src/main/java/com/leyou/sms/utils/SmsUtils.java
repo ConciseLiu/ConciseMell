@@ -30,7 +30,7 @@ public class SmsUtils {
 
     static final Logger logger = LoggerFactory.getLogger(SmsUtils.class);
 
-    public SendSmsResponse sendSms(String s, String phone, String code, String signName, String template) throws ClientException {
+    public SendSmsResponse sendSms(String phone, String code, String signName, String template) throws ClientException {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");

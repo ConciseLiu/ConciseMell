@@ -18,8 +18,18 @@ zuul:
     leyou-service: /item/**
     search-service: /search/**
     user-service: /user/**
+    auth-service: /auth/** # 授权中心微服务
   ignored-services:  
     - upload-service # 忽略upload-service服务
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 60000   #socket超时
+  add-host-header: true
+  sensitive-headers: # 置空过滤敏感头信息
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
 hystrix:
   command:
     default:
@@ -27,3 +37,15 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 6000 # 设置hystrix的超时时间为6000ms
+leyou:
+  jwt:
+    pubKeyPath:  d:\\rsa.pub # 公钥地址
+    cookieName: LY_TOKEN # cookie的名称
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/code
+      - /api/item
